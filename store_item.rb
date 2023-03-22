@@ -12,36 +12,13 @@
 
 class Shirt
 
-  def initialize(input_color, input_size, input_price)
-    @color = input_color
-    @size = input_size
-    @price = input_price
-  end
+    attr_reader :color, :size, :price
+    attr_writer :new_color, :new_size, :new_price
 
-  # getter
-  def color
-    @color
-  end
-
-  def size
-    @size
-  end
-
-  def price
-    @price
-  end
-
-  # setter/writer
-  def color=(new_color)
-    @color = new_color
-  end
-
-  def size=(new_size)
-    @size = new_size
-  end
-
-  def price=(new_price)
-    @price = new_price
+  def initialize(input_options)
+    @color = input_options[:color]
+    @size = input_options[:size]
+    @price = input_options[:price]
   end
 
   def print_info
@@ -50,7 +27,13 @@ class Shirt
 
 end
 
-shirt1 = Shirt.new("blue", "medium", "25")
+shirt1 = Shirt.new(
+  {
+  color: "blue",
+  size: "medium",
+  price: 25
+  }
+)
 p shirt1.color
 p shirt1.print_info
 
