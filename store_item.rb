@@ -13,7 +13,7 @@
 class Shirt
 
     attr_reader :color, :size, :price
-    attr_writer :new_color, :new_size, :new_price
+    attr_writer :color, :size, :price
 
   def initialize(input_options)
     @color = input_options[:color]
@@ -34,6 +34,6 @@ shirt1 = Shirt.new(
   price: 25
   }
 )
-p shirt1.color
+shirt1.color = ("green")
 p shirt1.print_info
 
