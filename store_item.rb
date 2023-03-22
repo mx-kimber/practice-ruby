@@ -22,7 +22,7 @@ class Shirt
   end
 
   def print_info
-    "A #{color} shirt in a size #{size} for #{price}"
+    "A #{color} shirt in a size #{size} for $#{price}"
   end
 
 end
@@ -37,3 +37,11 @@ shirt1 = Shirt.new(
 shirt1.color = ("green")
 p shirt1.print_info
 
+shirt2 = Shirt.new(
+{ color: "yellow",
+  size: "large",
+  price: 38}
+)
+
+shirt2.size = ("small")
+p shirt2.print_info
