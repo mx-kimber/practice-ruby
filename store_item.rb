@@ -45,7 +45,7 @@ class Shirt
   end
 
   def print_info
-    "A #{color} shirt in a size #{size}: $#{price}"
+    "A #{color} shirt in a size #{size} for #{price}"
   end
 
 end
