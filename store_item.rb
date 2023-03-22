@@ -10,7 +10,7 @@
 #shoes = {color: "brown", size: 8.5, price: 72}
 #p shoes
 
-class Shirts
+class Shirt
 
   def initialize(input_color, input_size, input_price)
     @color = input_color
@@ -50,7 +50,7 @@ class Shirts
 
 end
 
-shirt1 = Shirts.new("blue", "medium", "25")
+shirt1 = Shirt.new("blue", "medium", "25")
 p shirt1.color
 p shirt1.print_info
 
