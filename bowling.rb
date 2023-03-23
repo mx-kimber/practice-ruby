@@ -9,7 +9,10 @@
 # final score from turn 1 added to turn 2 totals for final turn score
 
 
+#make a gets.chomp
+
 bowler1 = [ ]
+turn = [ ]
 
 points1 = 5
 points2 = 5
@@ -20,6 +23,8 @@ bowler1 << turn1
 turn2 = points1 + points2 + turn1
 bowler1 << turn2
 p bowler1
+
+
 
 # each index is added from previous index
 # loop
