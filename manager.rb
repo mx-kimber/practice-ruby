@@ -25,8 +25,7 @@ employee2 = Employee.new(first_name: "Danilo", last_name: "Campos", salary: 7000
 
 class Manager < Employee
   attr_reader :employees
-  attr_writer :give_all_raises
-  attr_writer :fire_employees
+  attr_writer :give_all_raises, :active
 
   def initialize(input_options)
     super
@@ -47,26 +46,28 @@ class Manager < Employee
     end
     # p @employees[0].give_annual_raise
     # p @emloyees[1].give_annual_raise
-    p "giving all the raises"
+    # p "giving all the raises"
   end
 
   def fire_employees
-    @active = input_options[:active] = false
+    # @active = input_options[:active] = false
+    @employees.each do |employee|
+      employee.active = false
+    end
   end
 end
 
 manager = Manager.new(first_name: "Saron", last_name: "Yitbarek", salary: 100000, active: true, employees: [employee1, employee2])
 
-manager.print_info
-manager.send_report
+# manager.print_info
+# manager.send_report
+# p manager
 
-p manager
+# employee1.give_annual_raise
+# employee2.give_annual_raise
 
-employee1.give_annual_raise
-employee2.give_annual_raise
-
-p employee1
-
+p employee1.active
+p employee2
 
 # inputs outputs
 
