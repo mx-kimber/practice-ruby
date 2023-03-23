@@ -40,8 +40,13 @@ class Manager < Employee
   end
 
   def give_all_raises
-    p @employees[0].give_annual_raise
-    p @emloyees[1].give_annual_raise
+    i = 0
+    while i < @employees.length
+      @employees[i].give_annual_raise
+      i += 1
+    end
+    # p @employees[0].give_annual_raise
+    # p @emloyees[1].give_annual_raise
     p "giving all the raises"
   end
 
